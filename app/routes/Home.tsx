@@ -1,4 +1,4 @@
-import { useFetcher, type ActionFunctionArgs } from 'react-router';
+import { Form, useFetcher, type ActionFunctionArgs } from 'react-router';
 import { useState, useEffect } from 'react';
 
 export function Home() {
@@ -49,6 +49,7 @@ export function Home() {
         </div>
       )}
 
+      <h2>Form with useFetcher </h2>
       <form action={handleSubmit} className="mt-8 max-w-md mx-auto">
         <input
           type="text"
@@ -63,6 +64,22 @@ export function Home() {
           Submit
         </button>
       </form>
+
+      <h3>React router Form </h3>
+      <Form method="post" className="mt-8 max-w-md mx-auto">
+        <input
+          type="text"
+          name="message"
+          placeholder="Enter a message"
+          className="border border-gray-300 rounded px-4 py-2 w-full"
+        />
+        <button
+          type="submit"
+          className="mt-4 bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600"
+        >
+          Submit
+        </button>
+      </Form>
 
       <a
         className="block mt-8 text-blue-500 underline hover:text-blue-600"
